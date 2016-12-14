@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bignerdranch.android.receiptpic.Homeactivity">
+
+    <include
+       android:id="@+id/toolbar"
+       layout="@layout/toolbar"
+
+       />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/familypic"
+        android:src="@drawable/family"
+        android:minHeight="100dp"
+        android:minWidth="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/toolbar"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputfamilyname"
+
+        android:hint="@string/familyinfohere"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/familypic"
+        android:layout_toEndOf="@+id/familypic"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/toolbar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/familylabel"
+        android:textSize="30sp"
+        android:id="@+id/familyname"
+        android:layout_toRightOf="@+id/familypic"
+        android:layout_toEndOf="@+id/familypic"
+        android:layout_below="@+id/inputfamilyname"/>
+
+
+
+    <EditText
+        android:id="@+id/txtinput"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:singleLine="false"
+        android:hint="@string/categorylabel"
+        android:layout_below="@+id/familypic"
+        android:layout_toLeftOf="@+id/btadd"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:id="@+id/btadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:layout_alignTop="@+id/txtinput"
+        android:layout_alignRight="@+id/addpeoplebutton"
+        android:layout_alignEnd="@+id/addpeoplebutton"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listv"
+        android:layout_alignRight="@+id/vacactionbutton"
+        android:layout_alignEnd="@+id/vacactionbutton"
+        android:layout_below="@+id/txtinput"
+        android:layout_above="@+id/bellbutton">
+    </ListView>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bellbutton"
+        android:background="@drawable/bell"
+        android:onClick="onButtonClick"
+        android:layout_alignTop="@+id/vacactionbutton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:scaleType="fitCenter"/>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vacactionbutton"
+        android:background="@drawable/suitcase"
+        android:onClick="onButtonClick"
+        android:maxHeight="10dp"
+        android:maxWidth="10dp"
+        android:minHeight="10dp"
+        android:minWidth="10dp"
+        android:scaleType="fitCenter"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/bellbutton"
+        android:layout_toRightOf="@+id/bellbutton"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/camerabutton"
+        android:background="@drawable/camera"
+        android:onClick="onButtonClick"
+        android:contentDescription="@string/vacationsuitcse"
+        android:scaleType="fitCenter"
+        android:layout_below="@+id/listv"
+        android:layout_toRightOf="@+id/listv"
+        android:layout_toEndOf="@+id/listv"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addpeoplebutton"
+        android:background="@drawable/people"
+        android:onClick="onButtonClick"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/camerabutton"
+        android:contentDescription="@string/people"
+        android:layout_alignTop="@+id/camerabutton"
+        android:layout_toRightOf="@+id/camerabutton"/>
+
+
+
+</RelativeLayout>
